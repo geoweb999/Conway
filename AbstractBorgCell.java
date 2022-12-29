@@ -9,6 +9,13 @@
 // After DEATH years, a mature borg turns into a zombie (and is now alive for conway cells)
 // After DECOMPOSE years, a zombie borg becomes a random live Conway cell that cannot be assimilated for 10 years
 // 
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
+
 public abstract class AbstractBorgCell extends AbstractCell {
 
     static final int MATURITY = 5;
@@ -29,6 +36,25 @@ public abstract class AbstractBorgCell extends AbstractCell {
 		return getIsAlive() ? '■' : '■';
 	}
     
+    public Color getColor() {
+        int age = this.getAge();
+        if (age < MATURITY ) {
+            Color c = new Color(Color.PINK);
+            return c;
+        } else if (age < PARENT) {
+            Color c = new Color(Color.RED);
+            return c;            
+        } else if (age < DEATH) {
+            Color c = new Color(Color.MAGENTA);
+            return c;            
+        } else if (age < DECOMPOSE) {
+            Color c = new Color(Color.GRAY);
+            return c;            
+        }
+        Color c = new Color(Color.LIGHT_GRAY);
+        return c;
+    }
+
 	public  AbstractCell cellForNextGeneration() {
         return this;
 	}	

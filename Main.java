@@ -14,7 +14,7 @@ class Main {
 
         // Add some live conway cells, in a horizontal line
         for (int i = 0; i < 8; i++) {
-            ConwayCell c = new ConwayCell(500, 500 + i, world);
+            ConwayCell c = new ConwayCell(100, 100 + i, world);
             c.setIsAlive(true);
             world.replaceCell(c);
         }
@@ -88,9 +88,9 @@ class Main {
         int BOX_DIM = 1;
         for (int r = 0; r < world.ROWS; r++) {
 			for (int c = 0; c < world.COLS; c++) {
-                if (world.isChanged(r, c)) {
-                    continue;
-                }
+                //if (world.isChanged(r, c)) {
+                //    continue;
+                //}
                 if (!world.isAlive(r,c)) {
                     g.setColor(Color.WHITE);
                     g.fillRect(r * BOX_DIM, c * BOX_DIM, BOX_DIM, BOX_DIM);
@@ -99,7 +99,19 @@ class Main {
                     g.fillRect(r * BOX_DIM, c * BOX_DIM, BOX_DIM, BOX_DIM);
                 }
                 if (world.isBorg(r, c)) {
-                    g.setColor(new Color((255/(255-world.getAge(r, c)) + 100), 0, 0, 128));
+                    //g.setColor(world.getColor(r, c));
+                    int age = world.getAge(r, c);
+                    if (age < 5 ) {
+                        g.setColor(Color.GREEN);
+                    } else if (age < 20) {
+                        g.setColor(Color.CYAN);
+                    } else if (age < 100) {
+                        g.setColor(Color.MAGENTA);
+                    } else if (age < 200) {
+                        g.setColor(Color.GRAY);
+                    } else {
+                        g.setColor(Color.LIGHT_GRAY);
+                    }
                     g.fillRect(r * BOX_DIM, c * BOX_DIM, BOX_DIM, BOX_DIM);                    
                 }
             }

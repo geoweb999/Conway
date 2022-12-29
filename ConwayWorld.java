@@ -1,7 +1,13 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
+
 public class ConwayWorld {
 	
-	static final int ROWS = 1500;
-	static final int COLS = 750;
+	static final int ROWS = 750;
+	static final int COLS = 325;
 	
 	private AbstractCell[][] grid = new AbstractCell[ROWS][COLS]; 
 	
@@ -85,6 +91,11 @@ public class ConwayWorld {
     }
 
 	public boolean isChanged(int r, int c) {
-		return grid[r][c].isChanged()
+		return grid[r][c].isChanged();
 	}
+
+	public Color getColor(int r, int c) {
+		return grid[r][c].getColor();
+	}
+
 }

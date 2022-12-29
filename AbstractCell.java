@@ -1,3 +1,8 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
 
 public abstract class AbstractCell {
 	
@@ -91,6 +96,10 @@ public abstract class AbstractCell {
 		return this;
 	}
 
+	public Color getColor() {
+        Color c = new Color(Color.BLACK);
+        return c;
+    };
 	
 	public abstract AbstractCell cellForNextGeneration();
 	public abstract boolean willBeAliveInNextGeneration();
