@@ -14,7 +14,7 @@ class Main {
 
         // Add some live conway cells, in a horizontal line
         for (int i = 0; i < 8; i++) {
-            ConwayCell c = new ConwayCell(5, 5 + i, world);
+            ConwayCell c = new ConwayCell(500, 500 + i, world);
             c.setIsAlive(true);
             world.replaceCell(c);
         }
