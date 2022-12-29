@@ -72,14 +72,9 @@ class Main {
         frame.setVisible(true);
 
         while (true) {
-            //clearConsole();
             Graphics g = panel.getGraphics();
             Graphics(world, g);
-            //System.out.println(world.displayString());
             world.advanceToNextGeneration();
-            // String x = scnr.nextLine();
-            // wait time was 500msec
-            //Thread.sleep(150);
             g.dispose();
         }
     }
@@ -117,10 +112,3 @@ class Main {
             }
         }
     }
-
-    public static void clearConsole() {
-        // This crazy looking string clears the console.
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-}

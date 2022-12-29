@@ -1,14 +1,16 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/Library/Internet Plug-Ins/**/*.jar"
+        "/Library/Internet Plug-Ins/**/*.jar",
+        "/Users/studio/Library/Application Support/Oracle/Java/Deployment/security/securitypack.jar",
+        "/Library/Java/JavaVirtualMachines/jdk-18.0.1.jdk/Contents/Home/lib/jrt-fs.jar"
     ],
     "java.completion.filteredTypes": [
         
 
-        "com.sun.*",
-        "sun.*",
-        "jdk.*",
+        
+
+
         "org.graalvm.*",
         "io.micrometer.shaded.*"
     ]
