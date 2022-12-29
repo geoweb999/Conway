@@ -1,7 +1,7 @@
 public class ConwayWorld {
 	
-	static final int ROWS = 25;
-	static final int COLS = 25;
+	static final int ROWS = 1500;
+	static final int COLS = 750;
 	
 	private AbstractCell[][] grid = new AbstractCell[ROWS][COLS]; 
 	
@@ -78,5 +78,9 @@ public class ConwayWorld {
     // check if a cell is valid
     public boolean isValid(int r, int c) {
         return  r >= 0 && c >= 0 && r < ROWS && c < COLS;
+    }
+
+	public int getAge(int r, int c) {
+        return  grid[r][c].getAge();
     }
 }
