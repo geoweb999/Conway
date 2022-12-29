@@ -6,6 +6,7 @@ public abstract class AbstractCell {
 	private int column;				// column position in world
     private int cellAge;			// age of cell (increment by 1 each turn) 
     private boolean isBorg;			// a hack to test if a cell contains any type of borg
+	private boolean changed;      // tracks if cell has changed
 
 	protected ConwayWorld world;	// contains grid of all cells
 	
@@ -16,6 +17,7 @@ public abstract class AbstractCell {
 		isAlive = false;
         cellAge = 0;
         isBorg = false;
+		changed = false;
 	}
     
     public int getAge() {
@@ -25,6 +27,14 @@ public abstract class AbstractCell {
     public void setAge(int x) {
         cellAge = x;
     }
+
+	public void setChanged(boolean val) {
+		changed = val;
+	}
+
+	public boolean isChanged() {
+		return changed;
+	}
 
     public boolean isBorg() {
         return isBorg;

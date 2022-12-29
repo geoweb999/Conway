@@ -83,4 +83,8 @@ public class ConwayWorld {
 	public int getAge(int r, int c) {
         return  grid[r][c].getAge();
     }
+
+	public boolean isChanged(int r, int c) {
+		return grid[r][c].isChanged()
+	}
 }

@@ -88,6 +88,9 @@ class Main {
         int BOX_DIM = 1;
         for (int r = 0; r < world.ROWS; r++) {
 			for (int c = 0; c < world.COLS; c++) {
+                if (world.isChanged(r, c)) {
+                    continue;
+                }
                 if (!world.isAlive(r,c)) {
                     g.setColor(Color.WHITE);
                     g.fillRect(r * BOX_DIM, c * BOX_DIM, BOX_DIM, BOX_DIM);

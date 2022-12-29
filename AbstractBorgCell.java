@@ -22,6 +22,7 @@ public abstract class AbstractBorgCell extends AbstractCell {
         this.setAge(0);
         this.setIsAlive(false);
         this.setBorg(true);
+        this.setChanged(true);
 	}
 
 	public char displayCharacter() {
