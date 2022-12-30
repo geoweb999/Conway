@@ -4,7 +4,7 @@ public class BabyBorgCell extends AbstractBorgCell {
 
     public BabyBorgCell(int r, int c, ConwayWorld w) {
         super(r, c, w);
-        Gravity = -1;
+        Gravity = 0;
     }
 
     public int getGravity() {

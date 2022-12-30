@@ -6,12 +6,9 @@
         "/Library/Java/JavaVirtualMachines/jdk-18.0.1.jdk/Contents/Home/lib/jrt-fs.jar"
     ],
     "java.completion.filteredTypes": [
-        
-
-        
-
-
         "org.graalvm.*",
-        "io.micrometer.shaded.*"
+        "io.micrometer.shaded.*",
+        "java.awt.*",
+        "java.swing.*"
     ]
 }

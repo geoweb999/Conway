@@ -96,7 +96,8 @@ class Main {
                 if (world.isBorg(r, c)) {
                     //g.setColor(world.getColor(r, c));
                     int age = world.getAge(r, c);
-                    int red = 255 - (3 * age);
+                    int red = 255 - (5 * age);
+                    red = (red < 50) ? 50: red;
                     /*
                     if (age < 5 ) {
                         g.setColor(Color.GREEN);
@@ -113,7 +114,7 @@ class Main {
                     } else {
                         g.setColor(Color.BLACK);
                     }*/
-                    Color color = new Color(red, 10, 10);
+                    Color color = new Color(red, 10, 255-red);
                     g.setColor(color);
                     g.fillRect(r * BOX_DIM, c * BOX_DIM, BOX_DIM, BOX_DIM);                    
                 }
