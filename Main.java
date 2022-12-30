@@ -96,19 +96,28 @@ class Main {
                 if (world.isBorg(r, c)) {
                     //g.setColor(world.getColor(r, c));
                     int age = world.getAge(r, c);
+                    int red = 255 - (3 * age);
+                    /*
                     if (age < 5 ) {
                         g.setColor(Color.GREEN);
-                    } else if (age < 20) {
+                    } else if (age < 5) {
                         g.setColor(Color.CYAN);
-                    } else if (age < 100) {
+                    } else if (age < 20) {
                         g.setColor(Color.MAGENTA);
-                    } else if (age < 200) {
-                        g.setColor(Color.GRAY);
+                    } else if (age < 40) {
+                        g.setColor(Color.BLUE);
+                    } else if (age < 60) {
+                        g.setColor(Color.ORANGE);
+                    } else if (age < 80) {
+                        g.setColor(Color.PINK);
                     } else {
-                        g.setColor(Color.LIGHT_GRAY);
-                    }
+                        g.setColor(Color.BLACK);
+                    }*/
+                    Color color = new Color(red, 10, 10);
+                    g.setColor(color);
                     g.fillRect(r * BOX_DIM, c * BOX_DIM, BOX_DIM, BOX_DIM);                    
                 }
             }
         }
     }
+}

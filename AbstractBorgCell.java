@@ -20,8 +20,8 @@ public abstract class AbstractBorgCell extends AbstractCell {
 
     static final int MATURITY = 5;
     static final int PARENT = MATURITY + 5;
-    static final int DEATH = PARENT + 20;
-    static final int DECOMPOSE = DEATH + 10;
+    static final int DEATH = PARENT + 5;
+    static final int DECOMPOSE = DEATH + 20;
     static final int BIRTHRATE = 10; // 1 / 10 chance of birth
     
 	public AbstractBorgCell(int r, int c, ConwayWorld w) {

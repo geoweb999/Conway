@@ -14,13 +14,7 @@ public class ZombieBorgCell extends AbstractBorgCell {
         AbstractCell n;
         if (age > DECOMPOSE) {
             int randomChoice = random.nextInt(1);
-            if (randomChoice == 0) {
-                n = new ConwayCell(this.getRow(), this.getColumn(), this.world);
-            } else if (randomChoice == 1) {
-                n = new ConwayCell(this.getRow(), this.getColumn(), this.world);
-            } else {
-                n = new ConwayCell(this.getRow(), this.getColumn(), this.world);
-            }
+            n = new ConwayCell(this.getRow(), this.getColumn(), this.world);
             n.setBorg(true);
             return n;
         }
