@@ -1,3 +1,5 @@
+package src;
+
 public class BabyBorgCell extends AbstractBorgCell {
 
     private int Gravity; // determine if baby moves towards(-1) or away(1) from center of Grid

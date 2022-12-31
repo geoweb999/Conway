@@ -1,7 +1,9 @@
+package src;
 
-public class AlwaysAliveCell extends AbstractCell {
+
+public class NeverAliveCell extends AbstractCell {
 	
-	public AlwaysAliveCell(int r, int c, ConwayWorld w) {
+	public NeverAliveCell(int r, int c, ConwayWorld w) {
 		super(r, c, w);
 	}
 	
@@ -11,18 +13,18 @@ public class AlwaysAliveCell extends AbstractCell {
 	}
 	
 	public boolean willBeAliveInNextGeneration() {
-		return true;
+		return false;
+	}
+
+	public char displayCharacter() {
+		return 'X';
 	}
 	
 	public boolean getIsAlive() {
-		return true;
+		return false;
 	}
-	
-	public char displayCharacter() {
-		return '+';
-	}
-
 	public AbstractCell BorgForNextGeneration() {
 		return this;
 	}
+
 }

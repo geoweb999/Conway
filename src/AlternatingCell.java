@@ -1,3 +1,5 @@
+package src;
+
 // a class that has a cell that alternates between alive and not alive
 public class AlternatingCell extends AbstractCell {
 	
