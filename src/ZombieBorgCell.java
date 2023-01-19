@@ -26,8 +26,4 @@ public class ZombieBorgCell extends AbstractBorgCell {
     public boolean willBeAliveInNextGeneration() {
         return true;
     }
-
-    public char displayCharacter() {
-        return getIsAlive() ? '◘' : '◇';
-    }
 }

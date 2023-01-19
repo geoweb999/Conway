@@ -22,22 +22,6 @@ public class ConwayWorld {
 		}
 	}
 
-    
-	// Create a string that displays the grid
-	public String displayString() {
-    String displayString = "";
-    
-		for (int r = 0; r < ROWS; r++) {
-			for (int c = 0; c < COLS; c++) {
-				displayString += " " + grid[r][c].displayCharacter();		
-			}
-			
-			displayString += "\n";
-		}
-
-    return displayString;
-	}
-	
 	// Replace a single cell
 	public void replaceCell(AbstractCell cell) {
 		grid[cell.getRow()][cell.getColumn()] = cell;
@@ -94,10 +78,6 @@ public class ConwayWorld {
 
 	public boolean isChanged(int r, int c) {
 		return grid[r][c].isChanged();
-	}
-
-	public Color getColor(int r, int c) {
-		return grid[r][c].getColor();
 	}
 
 }

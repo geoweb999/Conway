@@ -19,10 +19,6 @@ public class AlwaysAliveCell extends AbstractCell {
 	public boolean getIsAlive() {
 		return true;
 	}
-	
-	public char displayCharacter() {
-		return '+';
-	}
 
 	public AbstractCell BorgForNextGeneration() {
 		return this;

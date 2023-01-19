@@ -16,10 +16,6 @@ public class NeverAliveCell extends AbstractCell {
 		return false;
 	}
 
-	public char displayCharacter() {
-		return 'X';
-	}
-	
 	public boolean getIsAlive() {
 		return false;
 	}

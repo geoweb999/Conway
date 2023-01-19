@@ -57,8 +57,4 @@ public class BabyBorgCell extends AbstractBorgCell {
         return false;
     }
 
-    public char displayCharacter() {
-        return getIsAlive() ? '◆' : '◆';
-    }
-
 }

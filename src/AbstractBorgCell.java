@@ -23,29 +23,6 @@ public abstract class AbstractBorgCell extends AbstractCell {
         this.setChanged(true);
 	}
 
-	public char displayCharacter() {
-		return getIsAlive() ? '■' : '■';
-	}
-    
-    public Color getColor() {
-        int age = this.getAge();
-        if (age < MATURITY ) {
-            Color c = new Color(Color.PINK);
-            return c;
-        } else if (age < PARENT) {
-            Color c = new Color(Color.RED);
-            return c;            
-        } else if (age < DEATH) {
-            Color c = new Color(Color.MAGENTA);
-            return c;            
-        } else if (age < DECOMPOSE) {
-            Color c = new Color(Color.GRAY);
-            return c;            
-        }
-        Color c = new Color(Color.LIGHT_GRAY);
-        return c;
-    }
-
 	public  AbstractCell cellForNextGeneration() {
         return this;
 	}	

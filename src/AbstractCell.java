@@ -51,10 +51,6 @@ public abstract class AbstractCell {
         isBorg = flag;
     }
     
-	public char displayCharacter() {
-		return isAlive ? 'O' : '.';
-	}
-	
 	public void setIsAlive(boolean value) {
 		isAlive = value;
 	}
@@ -98,11 +94,6 @@ public abstract class AbstractCell {
 		return this;
 	}
 
-	public Color getColor() {
-        Color c = new Color(Color.BLACK);
-        return c;
-    };
-	
 	public abstract AbstractCell cellForNextGeneration();
 	public abstract boolean willBeAliveInNextGeneration();
 }

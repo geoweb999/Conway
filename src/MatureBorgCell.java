@@ -80,7 +80,4 @@ public class MatureBorgCell extends AbstractBorgCell {
         return false;
     }
 
-    public char displayCharacter() {
-        return getIsAlive() ? '■' : '■';
-    }
 }

@@ -20,10 +20,6 @@ public class AlternatingCell extends AbstractCell {
 		return (!this.getIsAlive());
 	}
 	
-	public char displayCharacter() {
-		return getIsAlive() ? '∷' : '*';
-	}
-
 	public AbstractCell BorgForNextGeneration() {
 		return this;
 	}
